@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Chat Leak Shield - 실시간 AI 데이터 유출 방지 솔루션</title>
+  <meta name="description"
+    content="Google Chat Leak Shield는 실시간 로컬 정규식 및 Gemini AI 분석을 통해 API Key, 데이터베이스 자격증명 등 민감 정보의 유출을 차단하는 강력한 크롬 확장 프로그램입니다.">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icons/icon16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../icons/icon48.png">
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Externalized Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Premium Floating Particle Background (Styling details) -->
+  <header>
+    <div class="container header-content">
+      <a href="#" class="logo" id="logo-lnk">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M12 6v11M9 11h6" stroke-opacity="0.8" />
+          </svg>
+        </div>
+        Leak Shield
+      </a>
+      <a href="leak-shield-extension.zip" download class="btn-nav-download" id="nav-dl-btn">
+        배포 패키지 다운로드 (.zip)
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero">
+      <div class="container">
+        <div class="badge-premium">
+          <svg class="icon-svg" style="width:14px;height:14px;fill:none !important;" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M12 6v11M9 11h6" stroke-opacity="0.8" />
+          </svg>
+          Google Chat DLP & Leak Protection
+        </div>
+        <h1>Google Chat Leak Shield</h1>
+        <p class="lead">
+          채팅창을 떠나기 전 0.1초 만에 위협을 사전 감지합니다.<br>
+          실시간 로컬 키워드 매칭과 하이브리드 Gemini AI 분석을 결합한 지능형 데이터 자격증명 유출 방지 솔루션.
+        </p>
+        <div class="cta-container">
+          <a href="leak-shield-extension.zip" download class="btn-primary" id="main-dl-btn">
+            <svg class="icon-svg" viewBox="0 0 24 24">
+              <path
+                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" />
+            </svg>
+            패키지 zip 파일 다운로드
+          </a>
+          <a href="#simulator" class="btn-secondary" id="go-sim-btn">
+            실시간 시뮬레이터 체험
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24">
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 15l-4-4 1.41-1.41L10 13.17l5.59-5.59L17 9l-7 7z" />
+            </svg>
+          </div>
+          <h3>0.1초 로컬 초고속 탐지</h3>
+          <p>전송(Enter)을 누르기 전 타이핑 단계에서 정규식을 이용해 API Key, DB URI, SSH Key 등의 자격 증명을 0.1초 만에 감지하고 경고창을 표시합니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24">
+              <path
+                d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" />
+            </svg>
+          </div>
+          <h3>하이브리드 AI 심층 분석</h3>
+          <p>단순 키워드 매칭을 우회하는 민감 정보 유출 정황을 백그라운드에서 Gemini 2.5 Flash API를 활용하여 상황 인지적으로 심층 분석합니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" />
+            </svg>
+          </div>
+          <h3>API 한도 및 딜레이 극복</h3>
+          <p>안정적인 타이핑 스로틀링(Throttling) 기법과 로컬 확인 캐싱 엔진(Recent Leaks Cache)을 적용해 API 비용과 오버헤드를 극적으로 감축했습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulator Section (The Core Evaluator Sandbox) -->
+    <section class="simulator-section" id="simulator">
+      <div class="container">
+        <div class="section-title">
+          <h2>실시간 AI Leak Shield 시뮬레이터</h2>
+          <p>
+            익스텐션을 설치하지 않아도 브라우저 상에서 동일하게 기능하는 DLP 엔진을 지금 바로 테스트해 보세요.
+            아래 입력창에 민감 정보를 직접 타이핑하거나 우측의 프리셋을 클릭하세요.
+          </p>
+        </div>
+
+        <div class="simulator-workspace">
+          <!-- Left: Mock Google Chat Client -->
+          <div class="google-chat-mock">
+            <div class="chat-header">
+              <div class="chat-channel">
+                <div class="channel-avatar">P</div>
+                <div class="channel-info">
+                  <h4>프로젝트 공유방 (#dev-ops)</h4>
+                  <span><span class="indicator-dot"></span> 멤버 8명 (개발팀)</span>
+                </div>
+              </div>
+              <div class="chat-shield-badge" id="shield-status">
+                <svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 15l-4-4 1.41-1.41L10 13.17l5.59-5.59L17 9l-7 7z" />
+                </svg>
+                Leak Shield Active
+              </div>
+            </div>
+
+            <!-- Virtual Chat Message Stream -->
+            <div class="chat-messages" id="chat-stream">
+              <div class="message-row">
+                <div class="msg-avatar" style="background:#5c6bc0">김</div>
+                <div class="msg-content">
+                  <div class="msg-sender">김철수 (팀장)</div>
+                  <div class="msg-text">안녕하세요 팀원 여러분. 프로젝트 릴리즈 전에 환경변수 설정 파일이나 크레덴셜 정보를 절대 공유방에 그대로 올리지 않도록 주의해주시기 바랍니다.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Bar Emulating Extent Content JS Typing Listener -->
+            <div class="chat-input-area">
+              <div class="chat-input-container">
+                <textarea id="simulator-input" placeholder="#dev-ops에 메시지 보내기 (비밀 정보를 입력해보세요...)" rows="1"></textarea>
+                <button class="btn-send" id="simulator-send-btn">
+                  <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Presets Panel for Evaluators -->
+          <div class="presets-column">
+            <h3>퀵 테스트 프리셋</h3>
+            <p class="description">평가용 테스트 문장을 클릭하여 즉시 입력창에 복사하고 Leak Shield의 경고 알림 동작을 확인할 수 있습니다.</p>
+
+            <div class="preset-list">
+              <button class="preset-btn" data-text="aws_access_key_id = AKIAIOSFODNN7EXAMPLE">
+                <div class="preset-title">
+                  AWS API 자격증명
+                  <span class="preset-badge bg-red"
+                    style="color:#ef4444; border-color:rgba(239, 68, 68, 0.2)">CRITICAL</span>
+                </div>
+                <div class="preset-body">aws_access_key_id = AKIAIOSFODNN7EXAMPLE</div>
+              </button>
+
+              <button class="preset-btn"
+                data-text="mongodb://admin:secretPass99@cluster0.prod.mongodb.net:27017/prod_db">
+                <div class="preset-title">
+                  데이터베이스 커넥션 스트링
+                  <span class="preset-badge bg-red"
+                    style="color:#ef4444; border-color:rgba(239, 68, 68, 0.2)">CRITICAL</span>
+                </div>
+                <div class="preset-body">mongodb://admin:secretPass99@cluster0...</div>
+              </button>
+
+              <button class="preset-btn"
+                data-text="여기에 이번 Gemini API Key 새로 발급받은 거 전달해드려요: AIzaSyD8GjKL91hFmPqRstUvWxYz02468135790">
+                <div class="preset-title">
+                  Google Gemini API Key
+                  <span class="preset-badge bg-red"
+                    style="color:#ef4444; border-color:rgba(239, 68, 68, 0.2)">CRITICAL</span>
+                </div>
+                <div class="preset-body">API Key 새로 발급: AIzaSyD8GjKL91h...</div>
+              </button>
+
+              <button class="preset-btn" data-text="-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEA0Yp3d8vK...
+-----END RSA PRIVATE KEY-----">
+                <div class="preset-title">
+                  SSH Private RSA Key
+                  <span class="preset-badge bg-red"
+                    style="color:#ef4444; border-color:rgba(239, 68, 68, 0.2)">CRITICAL</span>
+                </div>
+                <div class="preset-body">-----BEGIN RSA PRIVATE KEY-----...</div>
+              </button>
+
+              <button class="preset-btn"
+                data-text="이거 저번에 공유해주신 슬랙 봇 토큰입니다. xoxb-123456789012-abcdefghijklmnopqrstuvwx 확인해주세요.">
+                <div class="preset-title">
+                  Slack Bot Token
+                  <span class="preset-badge bg-amber"
+                    style="color:#fbbf24; border-color:rgba(245, 158, 11, 0.2)">WARNING</span>
+                </div>
+                <div class="preset-body">슬랙 봇 토큰: xoxb-123456789012...</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Steps Visual Guide -->
+    <section class="guide-section" id="guide">
+      <div class="container">
+        <div class="section-title">
+          <h2>Chrome Extension 간편 설치 가이드</h2>
+          <p>
+            제출된 프로젝트 패키지를 다운로드 받아 구글 크롬 브라우저에 4단계의 짧은 클릭만으로 설치하여 Google Chat 상에서 완벽히 연동시킬 수 있습니다.
+          </p>
+        </div>
+
+        <div class="steps-timeline">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-card-content">
+              <h3>배포 패키지 다운로드</h3>
+              <p>
+                페이지 최상단 또는 하단의 <strong>'패키지 zip 파일 다운로드'</strong> 버튼을 클릭하여 <code>leak-shield-extension.zip</code> 파일을
+                다운로드합니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-card-content">
+              <h3>압축 해제 및 폴더 이동</h3>
+              <p>
+                다운로드 받은 zip 파일의 압축을 해제합니다. 해제 결과물로 생성되는 폴더 안에 <code>manifest.json</code> 등의 파일이 정상적으로 포함되어 있는지 확인합니다.
+              </p>
+            </div>
+            <div class="step-card-media">
+              <img src="../image/step2.png" alt="압축 해제 안내">
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <div class="step-card-content">
+              <h3>Chrome 개발자 모드 활성화</h3>
+              <p>
+                크롬 브라우저 주소창에 <code>chrome://extensions</code>를 입력하여 이동한 뒤, 우측 상단에 위치한 <strong>'개발자 모드(Developer
+                  mode)'</strong> 토글 스위치를 켭니다.
+              </p>
+            </div>
+            <div class="step-card-media">
+              <img src="../image/step3.png" alt="개발자 모드 켜기">
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">4</div>
+            <div class="step-card-content">
+              <h3>압축해제된 확장 프로그램 로드</h3>
+              <p>
+                좌측 상단의 <strong>'압축해제된 확장 프로그램을 로드(Load unpacked)'</strong> 버튼을 클릭하고, 2단계에서 압축을 해제했던 익스텐션 폴더를 통째로 선택하여
+                로드하면
+                설치가 완료됩니다!
+              </p>
+            </div>
+            <div class="step-card-media">
+              <img src="../image/step4.png" alt="확장 프로그램 로드">
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">5</div>
+            <div class="step-card-content">
+              <h3>Google Gemini API 키 발급</h3>
+              <p>
+                <a href="https://aistudio.google.com/app/apikey" target="_blank"
+                  style="color: var(--accent-cyan); text-decoration: none;">Google AI Studio</a>에 접속하여 <strong>'Create
+                  API
+                  key'</strong> 버튼을 눌러 새로운 Gemini API 키를 발급받습니다.
+              </p>
+            </div>
+            <div class="step-card-media double-img">
+              <img src="../image/step5.png" alt="Gemini API 키 생성 1">
+              <img src="../image/step5-1.png" alt="Gemini API 키 생성 2">
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">6</div>
+            <div class="step-card-content">
+              <h3>확장 프로그램 옵션</h3>
+              <p>
+                Google Chat Leak Shield를 찾습니다. 세부정보 버튼을 누른 후, 스크롤하여 확장 프로그램 옵션을 누릅니다.
+              </p>
+            </div>
+            <div class="step-card-media double-img">
+              <img src="../image/step6.png" alt="확장 프로그램 찾기">
+              <img src="../image/step6-1.png" alt="확장 프로그램 옵션 접속">
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">7</div>
+            <div class="step-card-content">
+              <h3>API 키 연동 및 적용</h3>
+              <p>
+                'Enterprise API Configuration' 항목에 발급받은 API 키를 입력하고 'Apply Configuration'을 클릭하면 모든 준비가 완료됩니다.
+              </p>
+            </div>
+            <div class="step-card-media">
+              <img src="../image/step7.png" alt="API 키 입력 및 적용">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Persistent Simulated Toast notifications in bottom right of browser -->
+  <div id="simulator-toast-container"></div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Google Chat Leak Shield. Developed with Gemini Hybrid DLP Architecture.</p>
+    </div>
+  </footer>
+
+  <!-- Externalized Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>

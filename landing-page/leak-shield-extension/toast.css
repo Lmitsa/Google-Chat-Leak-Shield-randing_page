@@ -1,0 +1,188 @@
+/* Google Chat Real-Time Leak Detector - Toast Notification Styling */
+
+/* Main fixed stacking container */
+#leak-shield-toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 380px;
+  max-width: calc(100vw - 48px);
+  z-index: 2147483647; /* Set to maximum allowed integer value to overlap everything */
+  display: flex;
+  flex-direction: column-reverse; /* Stacks new toasts on top of old ones */
+  gap: 12px;
+  pointer-events: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Individual Toast Notification Card */
+.leak-shield-toast {
+  pointer-events: auto; /* Re-enable pointer events for interactions */
+  background: rgba(17, 24, 39, 0.85); /* Dark translucent tailwind gray-900 */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  color: #f3f4f6; /* Gray-100 */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  transform: translateX(120%) scale(0.95);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slide in state */
+.leak-shield-toast.visible {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+/* Slide out state */
+.leak-shield-toast.dismissed {
+  transform: translateX(120%) scale(0.95);
+  opacity: 0;
+}
+
+/* Toast Header Layout */
+.leak-shield-toast-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.leak-shield-toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.leak-shield-toast-title-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.leak-shield-toast-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+/* Badges for Leak Categories */
+.leak-shield-toast-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bg-red {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.bg-amber {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.bg-blue {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Toast Close Button */
+.leak-shield-toast-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.leak-shield-toast-close:hover {
+  color: #ffffff;
+}
+
+/* Toast Body */
+.leak-shield-toast-body {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #d1d5db; /* Gray-300 */
+}
+
+.leak-shield-toast-text {
+  margin: 0;
+}
+
+/* Code Snippet Box */
+.leak-shield-toast-snippet {
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 8px 12px;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.leak-shield-toast-snippet code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 11px;
+  color: #a7f3d0; /* Green-200 */
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+/* Recommendation advice box */
+.leak-shield-toast-recommendation {
+  margin-top: 10px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #93c5fd; /* Soft Blue-300 */
+  line-height: 1.4;
+}
+
+/* Spinners for Scanning Loading State */
+.leak-shield-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  border-top-color: #3b82f6;
+  animation: leakShieldSpin 0.8s linear infinite;
+}
+
+@keyframes leakShieldSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Neon color variations for Severities */
+.leak-shield-toast-critical {
+  border-left: 4px solid #ef4444 !important;
+}
+
+.leak-shield-toast-warning {
+  border-left: 4px solid #f59e0b !important;
+}
+
+.leak-shield-toast-info {
+  border-left: 4px solid #3b82f6 !important;
+}
