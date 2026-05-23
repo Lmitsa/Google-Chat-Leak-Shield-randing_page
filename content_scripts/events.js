@@ -357,7 +357,7 @@ async function handleKeydown(e) {
               if (errorMsg.includes("is not configured") || errorMsg.includes("not configured")) {
                 title = "API 키 미설정";
                 message = "Gemini API 키가 아직 설정되지 않았습니다. 확장 프로그램 설정 페이지에서 API 키를 먼저 입력해 주세요.";
-              } else if (errorMsg.includes("API key not valid") || errorMsg.includes("API_KEY_INVALID") || errorMsg.includes("invalid")) {
+              } else if (errorMsg.includes("API key not valid") || errorMsg.includes("API_KEY_INVALID") || errorMsg.includes("invalid API key") || errorMsg.includes("Invalid API key")) {
                 title = "API 키 오류";
                 message = "설정된 Gemini API 키가 유효하지 않습니다. 확장 프로그램 설정 페이지에서 올바른 키를 입력했는지 다시 확인해 주세요.";
               } else if (errorMsg) {
